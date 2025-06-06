@@ -11,7 +11,7 @@ RUN du -h /go/bin/openvpn-aws
 
 FROM alpine:3.22
 
-RUN apk add --no-cache openvpn
+RUN apk add --no-cache openvpn iptables
 
 WORKDIR /vpn
 ADD configs/openvpn.conf /vpn/
