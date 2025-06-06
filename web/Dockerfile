@@ -1,6 +1,6 @@
 FROM node:12-alpine3.11 AS builder
 WORKDIR /app
-COPY . .
+COPY web/ .
 
 RUN apk -U add python make g++ \
   && npm ci \

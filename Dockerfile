@@ -2,7 +2,7 @@ FROM golang:1.13-alpine AS build
 
 WORKDIR /go/src/github.com/amadigan/openvpn-aws
 COPY . /go/src/github.com/amadigan/openvpn-aws/
-RUN go install ./...
+RUN go install -mod vendor ./...
 RUN du -h /go/bin/openvpn-aws
 
 

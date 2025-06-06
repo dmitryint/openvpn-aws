@@ -30,14 +30,14 @@ jobs:
           images: ghcr.io/${{ github.repository }}
           flavor: |
             latest=auto
-            prefix=ui
+            prefix=ui-
             suffix=
           tags: |
             type=semver,pattern={{version}}
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: web
+          context: .
           file: web/Dockerfile
           platforms: linux/arm64,linux/amd64
           push: true
