@@ -1,4 +1,4 @@
-FROM golang:1.24-alpine AS build
+FROM golang:1.13-alpine AS build
 
 WORKDIR /go/src/github.com/amadigan/openvpn-aws
 COPY . /go/src/github.com/amadigan/openvpn-aws/
